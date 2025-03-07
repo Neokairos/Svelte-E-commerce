@@ -1,0 +1,23 @@
+
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  fill: aquamarine;
+ 
+}
+  
+  .icon-cart {
+
+    background-image: url("../shopping-cart.svg");
+  }
+  .icon-search {
+    background-image: url("../search.svg");
+  }
+  .icon-home {
+    margin-right: 5px;
+    background-image: url("../home.svg");
+  }
+

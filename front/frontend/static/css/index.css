@@ -1,0 +1,302 @@
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 10px solid;
+    border-color:orchid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loading 0.9s linear infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(361deg);
+    }
+}
+
+.center {
+    position: absolute; /* Position the element absolutely within its nearest positioned ancestor */
+    top: 50%; /* Position the top edge of the element halfway down the page */
+    left: 50%; /* Position the left edge of the element halfway across the page */
+    transform: translate(-50%, -50%); /* Shift the element back by half its width and height to truly center it */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top-center {
+    position: absolute; /* Position the element absolutely within its nearest positioned ancestor */
+    top:  0; /* Align the element to the top of the container */
+    left:  50%; /* Position the left edge of the element halfway across the page */
+    transform: translateX(-50%); /* Shift the element back by half its width to truly center it horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.hover-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.down-sub {
+  background-color: rgba(0, 0, 0, 0.74);
+  position: absolute;
+  width: 200px;
+  height: 125px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1;
+ 
+  
+  transform-origin: top;
+  right: -5px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.2);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+ }
+
+ 
+ .hover-animation:hover .down-sub {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+ }
+
+
+
+
+
+.underlined-text {
+  text-align: center;
+  box-sizing: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: .813rem;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  top: 30px;
+  display: inline-block;
+  overflow: hidden; 
+}
+
+.underlined-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  width: 0;
+  height: 2px;
+  background-color: whitesmoke;
+  transition: all 0.4s ease-in-out;
+}
+.underlined-text:hover::after {
+  width: 100%; /* Expand to full width */
+  left: 0; /* Align to the left */
+  transform: translateX(-50%, 50%); /* Center the expansion */
+ }
+
+.ou {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+  border-radius: 20%;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.navbar-image {
+  margin-right: auto; /* Pushes the image to the left side */
+  margin-left: 15px; /* Adds some space on the left side */
+ }
+
+
+.butn {
+  width: 135px;
+
+
+}
+@keyframes bezierPattern {
+  0% { background-color: #8823af; }
+  50% { background-color: #621191; }
+  75% { background-color: #5c146e; }
+  99% { background-color: #8819b4; }
+  100% { background-color: #8823af; }
+}
+
+.butn:hover {
+ animation: bezierPattern 2s cubic-bezier(0.54, -0.65, 0.48, 0.54) infinite; /* Apply the animation on hover */
+}
+
+.product-title {
+  font-size: large;
+  text-decoration: none;
+  display: block;
+  text-shadow: 0 0 5px inherit, 0 0 20px inherit;
+}
+.product-title:hover {
+  color:darkorchid;
+  text-shadow: 0 0 5px rgb(139, 1, 219), 0 0 10px rgb(139, 1, 219);
+}
+
+.product-price {
+  font-size: 1.75rem;
+  color:rgb(39, 110, 24);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+}
+
+.product-img {
+  height: 310px; 
+  width: 100%;
+  object-fit: cover;
+
+  margin-top: 5px;
+  transition: opacity 0.5s ease;
+
+}
+
+
+.product-img:hover{
+  opacity: 1;
+}
+
+.box-image {
+  display: inline-block;
+  position: relative;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image:hover .product-img {
+    opacity: 0.8;
+}
+
+.box-image:hover .overlay {
+  opacity: 1;
+}
+
+.image-button {
+  color: antiquewhite;
+  background-color: #1ba2f6;;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: scale(0.2);
+  transform-origin: top;
+}
+
+
+.box-image:hover .image-button {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+.box-image:hover .image-button:hover {
+  color: rgb(189, 189, 189);
+  transform: scale(1.1);
+  background-color: #137dbe;
+  transition: transform 0.4s ease-out, color 0.4s ease-out;
+}
+
+.product-name-id {
+  font-family: 'Roboto Slab';
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0px;
+  padding-top: 10px;
+
+
+}
+
+.buy-button {
+  background-color: #33ce1f;
+  text-decoration: none;
+  border: 0;
+  height: 60px;
+  border-radius: 30px;
+  width: 50%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  transition: ease-in-out .3s;
+  display: flex; /* Changed from block to flex */
+  align-items: center; /* Added for vertical centering */
+  justify-content: center; /* Added for horizontal centering */
+  text-align: center; /* Keeps text centered horizontally */
+ 
+ }
+ 
+
+
+.buy-button:hover {
+  background-color: #228f14;
+ }
+
+
+
+.product-center {
+  font-family: arial;
+  font-size: 24px;
+  
+
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#currency {
+  border: none;
+  text-decoration: none;
+ 
+}
+#seller {
+  text-decoration: none;
+  cursor: pointer;
+}

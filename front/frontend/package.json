@@ -1,0 +1,46 @@
+{
+	"name": "frontend",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^4.0.0",
+		"@sveltejs/kit": "^2.17.3",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@tailwindcss/postcss": "^4.0.12",
+		"@types/eslint": "^9.6.1",
+		"autoprefixer": "^10.4.20",
+		"eslint": "^9.21.0",
+		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-svelte": "^2.35.1",
+		"postcss": "^8.5.3",
+		"prettier": "^3.1.1",
+		"prettier-plugin-svelte": "^3.1.2",
+		"svelte-check": "^4.1.4",
+		"svelte-preprocess": "^6.0.3",
+		"tailwindcss": "^4.0.10",
+		"typescript": "^5.0.0",
+		"vite": "^6.2.0",
+		"vite-plugin-mkcert": "^1.17.4"
+	},
+	"type": "module",
+	"dependencies": {
+		"@octokit/plugin-paginate-rest": "^11.4.3",
+		"@octokit/request": "^9.2.2",
+		"@zerodevx/svelte-toast": "^0.9.5",
+		"axios": "^1.6.7",
+		"octokit": "^4.1.2",
+		"svelte": "^5.20.4",
+		"svelte-notifications": "^0.9.98",
+		"svelte-routing": "^2.12.0",
+		"svelte-toast": "^1.0.0"
+	}
+}
